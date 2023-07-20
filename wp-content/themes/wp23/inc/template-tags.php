@@ -52,6 +52,17 @@ if ( ! function_exists( 'wp23_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'wp23_posted_in' ) ) :
+	function wp23_posted_in() {
+		$categories_list = get_the_category_list( esc_html__( ', ', 'wp23' ) );
+		if ( $categories_list ) {
+			/* translators: 1: list of categories. */
+			printf( '<span class="cat-links">' . esc_html__( ' IN %1$s', 'wp23' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+
+	}
+endif; 
+
 if ( ! function_exists( 'wp23_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -112,6 +123,8 @@ if ( ! function_exists( 'wp23_entry_footer' ) ) :
 
 	}
 endif;
+
+
 
 if ( ! function_exists( 'wp23_post_thumbnail' ) ) :
 	/**
