@@ -676,6 +676,13 @@ textarea {
 	font-size: 36px;
     font-weight: 600;
 }
+
+.site-footer {
+	clear:both;
+}
+.single .site .site-main {
+	width: 100%;
+}
 @media screen and (min-width:768px) {
 	.site .site-main {
 		width:calc( 100% - 250px );
@@ -760,6 +767,7 @@ textarea {
 	padding: 5px 20px;
 	display: block;
 	text-decoration: none;
+	font-weight: 600;
 }
 
 /* Small menu. */
@@ -844,12 +852,77 @@ textarea {
 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.08);
 }
 
-/* Comments
---------------------------------------------- */
-.comment-content a {
-	word-wrap: break-word;
+.single .post .entry-header {
+	padding:40px 0 60px;
+}
+.single .entry-header .entry-title {
+	color: #4A4A4A;
+	font-size: 36px;
+	font-weight: 700;
 }
 
+.single .post .entry-header p {
+	color: #000;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 32px;
+}
+.post .entry-content {
+	color: #4A4A4A;
+	font-family: Open Sans;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px; /* 200% */
+}
+.post .entry-content ul {
+	list-style-position: inside;
+	margin-left: 0;
+	padding:0;
+}
+
+.entry-content img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.08);
+}
+
+/* Comments
+--------------------------------------------- */
+.comments-area {
+	padding:70px 120px;
+	border-radius: 8px;
+	background: #FFF;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+}
+.comments-area input,
+.comments-area textarea {
+	border-radius: 10px;
+	border: 2px solid #E6E6E6;
+	width: 100%;
+	padding: 17px 25px 20px;
+	color: #9B9B9B;
+}
+.comment-content a {
+	word-wrap: break-word;
+} 
+
+.comments-area input[type="submit"] {
+	width: auto;
+	border-radius: 40px;
+	background-color: #FF5480;
+	color:#FFF;
+	padding:17px 30px 20px;
+	border: none;
+	font-size: 24px;
+}
+.comments-area input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #9283E0;
+}
 .bypostauthor {
 	display: block;
 }

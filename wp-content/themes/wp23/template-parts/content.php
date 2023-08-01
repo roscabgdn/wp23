@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
 	<?php wp23_post_thumbnail(); ?>
 	
 	<header class="entry-header">
@@ -23,7 +24,6 @@
 					endif; 
 					wp23_posted_by();
 					wp23_posted_in();
-
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
