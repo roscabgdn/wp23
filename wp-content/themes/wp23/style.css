@@ -44,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Galleries
 # plugins
 	- Jetpack infinite scroll
+	- Page Navi
 # Utilities
 	- Accessibility
 	- Alignments
@@ -748,6 +749,7 @@ textarea {
 	position: relative;
 	margin: 0 15px
 }
+.main-navigation li:hover a,
 .main-navigation li.current-menu-item a {
 	background-color: #FF5480;
 	color:#FFF;
@@ -914,6 +916,27 @@ textarea {
 	max-width: 100%;
 }
 
+.widget .wp-block-search__input {
+	border:0 none;
+}
+.widget .wp-block-search__button {
+	border: none;
+    background-color: transparent;
+    text-indent: -9999px;
+    color: #FFF;
+	position: relative;
+}
+.widget .wp-block-search__button:after {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	content: " ";
+	background-image: url('assets/images/magnifying-glass.png');
+	width: 24px;
+	height: 24px;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,
@@ -1005,6 +1028,7 @@ textarea {
 # Plugins
 --------------------------------------------------------------*/
 
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 
@@ -1018,6 +1042,14 @@ textarea {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+
+/* Page Navi
+--------------------------------------------- */
+.wp_pagenavi {
+	
+}
+
 
 /*--------------------------------------------------------------
 # Utilities
